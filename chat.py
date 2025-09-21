@@ -7,7 +7,7 @@ mc = MarkovChain(n=2)
 mc.train(text)
 
 while True:
-    i = input('? ')
+    i = input('あなた: ')
     if i == "exit":
         break
-    print(mc.generate(38))
+    print('ひろゆき: ' + mc.generate(30).replace('\n', ''))

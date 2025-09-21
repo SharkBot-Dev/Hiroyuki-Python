@@ -26,7 +26,7 @@ class MarkovChain:
             next_word = random.choice(next_words)
             result.append(next_word)
             key = tuple(result[-self.n:])
-        return ''.join(result)
+        return ''.join(result).split('。')[0] + '。'
 
 if __name__ == "__main__":
     with open("hiroyuki.txt", encoding="utf-8") as f:
