@@ -15,8 +15,8 @@ class MarkovChain:
             if key not in self.model:
                 self.model[key] = []
             self.model[key].append(next_word)
-
-    def generate(self, length=30):
+            
+    def generate(self, length=30, servername: str = 'サーバー'):
         key = random.choice(list(self.model.keys()))
         result = list(key)
         for _ in range(length - self.n):
@@ -26,7 +26,7 @@ class MarkovChain:
             next_word = random.choice(next_words)
             result.append(next_word)
             key = tuple(result[-self.n:])
-        return ''.join(result).split('。')[0] + '。'
+        return ''.join(result).split('。')[0] + '。'.replace('太郎', servername)
 
 if __name__ == "__main__":
     with open("hiroyuki.txt", encoding="utf-8") as f:
