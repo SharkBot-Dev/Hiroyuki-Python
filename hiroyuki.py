@@ -35,5 +35,4 @@ if __name__ == "__main__":
     mc = MarkovChain(n=2)
     mc.train(text)
 
-    for _ in range(5):
-        print(mc.generate(40))
+    print(mc.generate(30))
