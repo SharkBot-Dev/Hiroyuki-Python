@@ -3,10 +3,11 @@
 
 # ライブラリのインストール
 ```
-pip install janome
+pip install janome flask
 ```
 
 # 実行する
 ```
-python3 hiroyuki.py
+python3 main.py
+python3 server.py
 ```
